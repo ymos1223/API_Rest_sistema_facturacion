@@ -30,4 +30,14 @@ public class Categoria {
     @JsonManagedReference
     @JsonIgnore
     private List<Producto> productos = new ArrayList<>();
+
+    public Categoria(DatosRegistroCategoria datosRegistroCategoria) {
+        this.nombre = datosRegistroCategoria.nombre();
+    }
+
+    public void actualizarCategoria(DatosActualizarCategoria datosActualizarCategoria) {
+        if (datosActualizarCategoria.nombre() != null) {
+            this.nombre = datosActualizarCategoria.nombre();
+        }
+    }
 }
