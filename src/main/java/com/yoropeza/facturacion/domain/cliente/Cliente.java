@@ -44,4 +44,19 @@ public class Cliente {
         this.createAt = LocalDateTime.now();
     }
 
+    public void actualizarCliente(DatosActualizarCliente datosActualizarCliente) {
+        if(datosActualizarCliente.nombre() != null) {
+            this.nombre = datosActualizarCliente.nombre();
+        }
+        if(datosActualizarCliente.apellido() != null) {
+            this.apellido = datosActualizarCliente.apellido();
+        }
+        if(datosActualizarCliente.dni() != 0) {
+            this.dni = datosActualizarCliente.dni();
+        }
+        if(datosActualizarCliente.telefono() != null) {
+            this.telefono = datosActualizarCliente.telefono();
+        }
+    }
+
 }
